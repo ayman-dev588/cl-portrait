@@ -3,7 +3,7 @@
 var wordsArray = ['حطّم' ,'أواني' ,'الزّهرِ' ,'والمرايا', 'اغضب' ,'كما' ,'تشاءُ', 'واجرحْ' ,'أحاسيسي' ,'كما' ,'تشاءُ','فكلُّ' ,'ما' ,'تفعلهُ' ,'سواءُ','كلُّ' ,'ما' ,'تقولهُ' ,'سواءُ']; 
 
 //Portrait image source
-var portraitImg = "https://st4.depositphotos.com/2760050/40817/i/450/depositphotos_408176034-stock-photo-man-bearded-hipster-stylish-mustache.jpg";
+var portraitImg = "img/ayman.jpg";
 
 var originalImg;
 
@@ -11,7 +11,7 @@ var originalImg;
 //Canvas setup with protrait image and font style
 function setup() {    
     createCanvas(windowWidth, windowHeight);
-    background(0);
+    background(255);
 
     loadedImg = loadImage(portraitImg);
     loadedImg.loadPixels();
@@ -28,12 +28,12 @@ function setup() {
     var pixelColor = loadedImg.get(xPosition, yPosition);
     var c = color(pixelColor);
     
-    textSize(random(15));
+    textSize(random(20));
     
     //for (let e = 1; e <= 1; e++) {
       //for (let i = 1; i <= 1; i++) {  
         fill(c);
-        stroke(0);
+        stroke(255);
         strokeWeight(1);
         textStyle(BOLD);
         text(random(wordsArray), xPosition, yPosition);
